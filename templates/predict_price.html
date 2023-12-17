@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Predict Car Price</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Predict Car Price</h2>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <label for="company">Car Company Name:</label>
+            {{ form.company() }}
+
+            <label for="model">Car Model:</label>
+            {{ form.model() }}
+
+            <label for="year">Year Made:</label>
+            {{ form.year() }}
+
+            <label for="showroom">Purchased Showroom:</label>
+            {{ form.showroom() }}
+
+            <label for="engine">Engine Type:</label>
+            {{ form.engine() }}
+
+            <label for="kms">Kilometers Ran:</label>
+            {{ form.kms() }}
+
+            <button type="submit">Predict Price</button>
+        </form>
+    </div>
+</body>
+
+</html>
